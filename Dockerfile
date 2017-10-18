@@ -16,6 +16,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* 
 ADD chromium-browser /usr/bin/
 ADD start.sh /usr/local/bin/
+ADD xubuntu-sudoers /etc/sudoers.d/
 USER user
 ENTRYPOINT [ "/usr/local/bin/start.sh" ]
 CMD [ ]
